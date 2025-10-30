@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Global Chronicle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Send a direct inquiry to The Global Chronicle team using our secure contact form.">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; }
+        .masthead-bg { background-color: #0d47a1; color: white; }
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db; /* gray-300 */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-size: 1.125rem; /* text-lg */
+            transition: border-color 0.2s;
+        }
+        .form-input:focus {
+            border-color: #0d47a1; /* masthead-bg deep blue on focus */
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="masthead-bg shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <h1 class="text-5xl font-extrabold tracking-tight">
+                    <a href="index.html" class="hover:text-gray-200 transition duration-150">The Global Chronicle</a>
+                </h1>
+                <nav class="mt-4 lg:mt-0 space-x-6 text-xl font-medium">
+                    <a href="index.html" class="hover:text-red-300 border-b-2 border-transparent transition duration-150 pb-1">Home</a>
+                    <a href="daily_news.html" class="hover:text-red-300 border-b-2 border-transparent transition duration-150 pb-1">Daily News</a>
+                    <a href="privacy.html" class="hover:text-red-300 transition duration-150 pb-1">Privacy</a>
+                    <a href="terms.html" class="hover:text-red-300 transition duration-150 pb-1">Terms</a>
+                    <a href="contact.html" class="hover:text-red-300 border-b-2 border-red-500 transition duration-150 pb-1">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+        <div class="bg-white p-10 rounded-xl shadow-2xl border-t-8 border-red-600">
+            
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-2 text-center">
+                Get In Touch
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 text-center">
+                We're here to answer your questions and hear your feedback.
+            </p>
+
+            <form action="[YOUR-FORM-SUBMISSION-ENDPOINT]" method="POST" class="space-y-6">
+                
+                <div>
+                    <label for="full-name" class="block text-lg font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" name="full-name" id="full-name" required class="form-input" placeholder="John Doe">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" name="email" id="email" required class="form-input" placeholder="example@news.com">
+                </div>
+                
+                <div>
+                    <label for="inquiry-type" class="block text-lg font-medium text-gray-700 mb-1">Type of Inquiry</label>
+                    <select name="inquiry-type" id="inquiry-type" required class="form-input">
+                        <option value="">-- Select One --</option>
+                        <option value="editorial">Editorial / News Tip</option>
+                        <option value="advertising">Advertising / Partnership</option>
+                        <option value="technical">Technical Support / Website Issue</option>
+                        <option value="general">General Feedback</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message" class="block text-lg font-medium text-gray-700 mb-1">Your Message</label>
+                    <textarea name="message" id="message" rows="5" required class="form-input" placeholder="Please write your message here..."></textarea>
+                </div>
+
+                <div class="flex items-start pt-4">
+                    <div class="flex items-center h-6">
+                        <input id="privacy-consent" name="privacy-consent" type="checkbox" required class="focus:ring-red-500 h-5 w-5 text-red-600 border-gray-300 rounded">
+                    </div>
+                    <div class="ml-3 text-base">
+                        <label for="privacy-consent" class="font-medium text-gray-700">
+                            I agree to the collection and use of my data as outlined in the <a href="privacy.html" target="_blank" class="text-blue-700 hover:text-red-600 hover:underline font-semibold">Privacy Policy</a>.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" class="w-full inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-xl font-bold rounded-md text-white bg-gray-900 hover:bg-red-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Send Message
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 text-center">
+                    All submissions are monitored and will receive a response within 48 business hours.
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="masthead-bg mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">
+            <p class="text-xl font-bold mb-4">The Global Chronicle — Reliable. Unbiased. Authoritative.</p>
+            <div class="flex justify-center space-x-6 text-lg font-medium">
+                <a href="privacy.html" class="hover:text-red-300 transition duration-150">Privacy Policy</a>
+                <span class="text-red-400">|</span>
+                <a href="terms.html" class="hover:text-red-300 transition duration-150">Terms & Conditions</a>
+                <span class="text-red-400">|</span>
+                <a href="contact.html" class="hover:text-red-300 transition duration-150">Contact Us</a>
+                <span class="text-red-400">|</span>
+                <a href="daily_news.html" class="hover:text-red-300 transition duration-150">Archives</a>
+            </div>
+            <p class="mt-4 text-sm text-gray-300">&copy; 2025 The Global Chronicle. All rights reserved. Content provided for informational purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>
