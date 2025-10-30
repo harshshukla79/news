@@ -1,0 +1,5 @@
+This is the required authorization file for Finance Today News to monetize via Google Ads (AdSense/Ad Manager).
+
+Replace 'pub-2631113768269471' with your actual AdSense or Ad Manager Publisher ID.
+
+https://www.google.com/search?q=google.com, pub-2631113768269471, DIRECT, f08c47fec0942fa0
